@@ -1,0 +1,34 @@
+name:                hs-tensor
+version:             0.1.0.0
+synopsis:            Multi-dimensional array library with focus on tensor-like operations for Haskell.
+-- description:         
+license:             MIT
+license-file:        LICENSE
+author:              Yuri D. Lensky
+maintainer:          ydl@ydl.cm
+-- copyright:           
+category:            Math
+build-type:          Simple
+-- extra-source-files:  
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     Data.Tensor
+                       Data.Tensor.Slice
+                       Data.Tensor.Shape
+                       Data.Tensor.Stored.StorageScheme
+                       Data.Tensor.Stored.StorageScheme.VectorStorageScheme
+                       Data.Tensor.Stored.StorageScheme.DenseSS
+                       Data.Tensor.Stored.StorageScheme.HermitianT
+                       Data.Tensor.Stored.SemiDense
+                       Data.Permutation
+  -- other-modules:       
+  other-extensions:    MultiParamTypeClasses, TypeFamilies, PolyKinds, FlexibleInstances
+  build-depends:       base >=4.7 && <4.8
+                     , lens >= 4.3.3
+                     , vector >=0.10 && <0.11
+                     , hs-complex-utils >= 0.1
+                     , containers
+  hs-source-dirs:      lib
+  default-language:    Haskell2010
+  ghc-options:         -O2 -Wall
